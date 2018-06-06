@@ -2,12 +2,17 @@
 
 ![Broccoli Homepage Screenshot](https://github.com/dottjt/broccoli-co/blob/master/homepage.png "Broccoli Homepage Screenshot")
 
+# ONLINE
+
+The project should be available, for your convenience:
+
+> https://broccoli-pegpowhmdy.now.sh/
 
 # SETUP
 
-This application was built using Create React App. It utilises MobX for state management and Axios for making HTTP requests. 
+This application was built using Create React App. It utilises MobX for state management and Axios for making HTTP requests. It has been deployed using Now.
 
-In order to setup the application please the root of this repository and install all required dependencies:
+In order to setup this application, please go to the root folder of this repository and install all required dependencies:
 
 ```sh
 git clone https://github.com/dottjt/broccoli-co.git
@@ -35,8 +40,8 @@ yarn test
 ```
 
 
-# Amends
+# TWEAKS
 
-- Decided to add a Recaptcha and a Close button to the popup form (technically the the recaptcha doesn't work, because it requires server-side validation, but added for the sake of completeness)
-- Added my own wacky designs.
-- 
+- Added a Recaptcha to the form (technically it doesn't actually validate anything, because it requires server-side validation)
+- Added a close button to the popup form. 
+- Added my own design twists on the whole thing. 
