@@ -20,7 +20,7 @@ On another level, the orange coming in from top-right hand corner is also meant 
 
 I know, folks. 
 
-It all sounds very wanky, but I think these are the reasons why the website feels so... complete. 
+It all sounds very wanky, but I think these are the reasons why the website feels so... complete on a subconscious level. 
 
 # UX TWEAKS
 
