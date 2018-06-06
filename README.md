@@ -6,9 +6,16 @@
 
 This project is available online for your convenience:
 
+> https://broccoli.juliusreade.com/ 
+
+NOTE: I knocked the server/domain up super quick this morning, so it's possible that the DNS for the domain has not yet propagated, just in case you cannot access the domain. It seems fine on my end.
+
+Alternatively it is available here:
+
 > https://broccoli-emvxnkfmke.now.sh
 
 NOTE: The link may not work, as they tend to take them down after a period of time, but given it was created within the past few hours, it should be fine. I've also found that it can be slow, so yeah.
+
 
 # DESIGN CONSIDERATIONS
 
