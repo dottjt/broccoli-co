@@ -1,4 +1,23 @@
-### Approach
 
-- Decided not to modularise css/react into components, because the projects wasn't large enough.
-- I also avoided using redux for the same reason. 
+
+### SETUP
+
+This application was built using create-react-app. 
+
+In order to setup the application please the root of this repository and install all required dependencies:
+
+> git clone https://github.com/dottjt/broccoli-co.git
+> cd broccoli-co
+> yarn install
+
+In order to run the application in development mode on port http://localhost:3000:
+
+> yarn start
+
+In order to build the application and build static files for production: 
+
+> yarn build
+
+In order to run automated tests please run:
+
+> yarn test
