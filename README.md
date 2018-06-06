@@ -10,13 +10,6 @@ This project is available online for your convenience:
 
 NOTE: I knocked up the server/domain super quick this morning, so it's possible that the DNS for the domain has not yet propagated, just in case you cannot access the domain. It seems fine on my end.
 
-Alternatively it is available here:
-
-> https://broccoli-jomxzlznnk.now.sh
-
-NOTE: The link may not work, as they tend to take them down after a period of time, but given it was created within the past few hours, it should be fine. I've also found that it can be slow, so yeah.
-
-
 # DESIGN CONSIDERATIONS
 
 I decided to go with a vibrant gradient background to represent the brand of the website. I think it makes the website feel more organic and more like a native application, rather than a static backdrop of information.
