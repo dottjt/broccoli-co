@@ -12,7 +12,6 @@ class App extends Component {
     
     return (
       <div>
-        <div className="page__underlay"></div>
         <div className="page">
           <nav className="nav">
             <h1 className="nav__title">
@@ -46,11 +45,5 @@ class App extends Component {
     );
   }
 }
-
-// App.protoTypes = {
-//   store: PropTypes.shape({
-
-//   })
-// }
 
 export default App;

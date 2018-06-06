@@ -3,7 +3,7 @@ const validateEmail = (email) => {
   return re.test(String(email).toLowerCase());
 }
 
-export const validateFormValues = (fullName, email, emailConfirmation) => {
+export const validateFormValues = (fullName, email, emailConfirmation, formVerification) => {
   const invalidFullName = !fullName || fullName.length < 3; // clearly not a coincidence, because love is in the air <3
   const invalidEmail = !email || !validateEmail(email);
   const invalidEmailConfirmation = email !== emailConfirmation;
@@ -12,6 +12,7 @@ export const validateFormValues = (fullName, email, emailConfirmation) => {
     return {
       isValid: false,
       errorMessage: "Please enter your full name.",
+      errorType: "fullName",
     }
   }
   
@@ -19,6 +20,7 @@ export const validateFormValues = (fullName, email, emailConfirmation) => {
     return {
       isValid: false,
       errorMessage: "Your emails don't match.",
+      errorType: "email",
     }
   }
 
@@ -26,12 +28,22 @@ export const validateFormValues = (fullName, email, emailConfirmation) => {
     return {
       isValid: false,
       errorMessage: "Please enter a valid email",
+      errorType: "emailConfirmation",
+    }
+  }
+
+  if (formVerification) {
+    return {
+      isValid: false,
+      errorMessage: "Please verify the captcha",
+      errorType: "recaptcha",
     }
   }
 
   return {
     isValid: true,
     errorMessage: "",
+    errorType: "success"
   };
 }
 

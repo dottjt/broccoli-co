@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { observer } from 'mobx-react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
+import Recaptcha from 'react-recaptcha';
+// var Recaptcha = require('react-recaptcha');
 
 @observer
 export class FormInput extends Component {
@@ -17,6 +19,12 @@ export class FormInput extends Component {
   }
 }
 
+FormInput.propTypes = {
+  value: PropTypes.string,
+  placeholder: PropTypes.string,
+  onChangeInput: PropTypes.func,
+}
+
 @observer
 export class FormButton extends Component {
   render() {
@@ -26,16 +34,20 @@ export class FormButton extends Component {
           Loading, please wait...
         </div>
       )
+    } else {
+      return (
+        <button className={`form__button form__button__faded__${this.props.formValuesExist}`} onClick={this.props.onFormSubmit}>
+          Send
+        </button>
+      )  
     }
-    return (
-      <button
-        className={`form__button form__button__faded__${this.props.formValuesExist}`}
-        onClick={this.props.onFormSubmit}
-      >
-        Send
-      </button>
-    )  
   }
+}
+
+FormButton.propTypes = {
+  formStatus: PropTypes.string,
+  onFormSubmit: PropTypes.func,
+  formValuesExist: PropTypes.bool,
 }
 
 export const FormError = (props) => (
@@ -47,6 +59,14 @@ export const FormError = (props) => (
   :
     null
 )
+
+FormError.propTypes = {
+  formValidationObject: PropTypes.shape({
+    isValid: PropTypes.bool,
+    errorMessage: PropTypes.string,
+    errorType: PropTypes.string,
+  })
+}
 
 export const FormSuccess = (props) => (
   <div className={`form__underlay__true`}>
@@ -62,6 +82,17 @@ export const FormSuccess = (props) => (
   </div>
 )
 
-export const FormCaptcha = () => (
-  <div class="g-recaptcha" data-sitekey="6LfBh10UAAAAALsuVrOnNAOyJ_d6z0ysTU0ox1W6"></div>  
+FormSuccess.propTypes = {
+  resetForm: PropTypes.func,
+}
+
+
+export const FormCaptcha = (props) => (
+  <Recaptcha
+    sitekey="6LfBh10UAAAAALsuVrOnNAOyJ_d6z0ysTU0ox1W6"
+    render="explicit"
+    verifyCallback={props.onFormVerification}
+    expiredCallback={props.onFormVerificationExpiration}
+  />
 )
+

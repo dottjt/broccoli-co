@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
 import { observer } from 'mobx-react';
-
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import { FormButton, FormCaptcha, FormError, FormInput } from './FormUtilities';
 
-import { FormInput, FormButton, FormError, FormCaptcha } from './FormUtilities';
+
 
 @observer
 class Form extends Component {
-
   render() {
     const store = this.props.store;
 
@@ -25,7 +24,7 @@ class Form extends Component {
           </div>
 
           <div className="form__submission__container">
-            <FormCaptcha />
+          <FormCaptcha onFormVerification={store.onFormVerification} onFormVerificationExpiration={store.onFormVerificationExpiration} />
             <FormButton formStatus={store.formStatus} onFormSubmit={store.onFormSubmit} formValuesExist={store.formValuesExist} fullName={store.fullName} email={store.email} emailConfirmation={store.emailConfirmation} />
             <FormError formValidationObject={store.formValidationObject} />
           </div>
@@ -37,7 +36,27 @@ class Form extends Component {
 
 Form.propTypes = {
   store: PropTypes.shape({
-    
+    onFormVerification: PropTypes.func,
+    onFormVerificationExpiration: PropTypes.func,
+
+    formStatus: PropTypes.string,
+    onFormSubmit: PropTypes.func,
+
+    formValidationObject: PropTypes.shape({
+      isValid: PropTypes.bool,
+      errorMessage: PropTypes.string,  
+    }),
+
+    isFormVisible: PropTypes.bool,
+    isFormVisibleToggle: PropTypes.func,
+
+    fullName: PropTypes.string,
+    email: PropTypes.string,
+    emailConfirmation: PropTypes.string,
+
+    onChangeFullName: PropTypes.func,
+    onChangeEmail: PropTypes.func,
+    onChangeEmailConfirmation: PropTypes.func,
   }),
 }
 

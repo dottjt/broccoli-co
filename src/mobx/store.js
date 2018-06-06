@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const apiEndpoint = "https://l94wc2001h.execute-api.ap-southeast-2.amazonaws.com/prod/fake-auth";
 
-export default class AppStore {
+class AppStore {
   
   @observable isFormVisible = false;
   @action isFormVisibleToggle = isFormVisible => this.isFormVisible = !isFormVisible;
@@ -18,8 +18,12 @@ export default class AppStore {
   @observable emailConfirmation = "";
   @action onChangeEmailConfirmation = inputValue => this.emailConfirmation = inputValue;
 
-  // initial, loading, success, failure
-  @observable formStatus = "initial";
+  @observable isFormVerified = false;
+  @action onFormVerification = inputValue => this.isFormVerified = true;
+  @action onFormVerificationExpiration = inputValue => this.isFormVerified = false;
+
+  // values: initial, loading, success, failure
+  @observable formStatus = "initial";  
 
   @observable formValidationObject = {
     isValid: false,
@@ -32,7 +36,7 @@ export default class AppStore {
 
   @action onFormSubmit = () => {
     if (this.formValuesExist) {
-      this.formValidationObject = validateFormValues(this.fullName, this.email, this.emailConfirmation);
+      this.formValidationObject = validateFormValues(this.fullName, this.email, this.emailConfirmation, this.isFormVerified);
     }
 
     if (this.formValidationObject.isValid) {
@@ -50,11 +54,13 @@ export default class AppStore {
   }
 
   @action resetForm = () => {
+    this.isFormVerified = false;
     this.isFormVisible = false;
     this.formStatus = "initial";
     this.fullName = "";
     this.email = "";
-    this.emailConfirmation = ""; 
+    this.emailConfirmation = "";
   }
 }
  
+export default new AppStore();
