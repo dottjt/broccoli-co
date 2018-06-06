@@ -12,7 +12,7 @@ NOTE: The link may not work, as they tend to take them down after a period of ti
 
 # DESIGN CONSIDERATIONS
 
-I decided to go with a vibrant gradient background to represent the brand of the website. I think it makes the website feel more organic and more like a native application, rather than a static website.
+I decided to go with a vibrant gradient background to represent the brand of the website. I think it makes the website feel more organic and more like a native application, rather than a static backdrop of information.
 
 The orange and pink are philosophically meant to represent the feeling of "fruit in the morning", which ties into this idea of healthy eating (aka broccoli). The problem is that green isn't a particularly appetising, nor necessarily appealing colour, which is why we need to use associated colours to try and convey Broccoli's brand message.
 
