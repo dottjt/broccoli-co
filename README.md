@@ -23,7 +23,7 @@ I decided to go with a vibrant gradient background to represent the brand of the
 
 The orange and pink are philosophically meant to represent the feeling of "fruit in the morning", which ties into this idea of healthy eating (aka broccoli). The problem is that green isn't a particularly appetising, nor necessarily appealing colour, which is why we need to use associated colours to try and convey Broccoli's brand message.
 
-On another level, the orange coming in from top-right hand corner is also meant to represent the morning sun, casting a shadow over the thick animated bezel of the primary button, creating this kind of "tropical nirvana" on your computer screen.
+On another level, the orange coming in from the top-right hand corner is also meant to represent the morning sun, casting a shadow over the thick animated bezel of the primary button, creating this kind of "tropical nirvana" on your computer screen.
 
 I know, folks. 
 
