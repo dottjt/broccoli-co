@@ -6,22 +6,28 @@
 
 This project is available online for your convenience:
 
-> https://broccoli-pegpowhmdy.now.sh/
+> https://broccoli-sdurjtgaem.now.sh
+
+NOTE: The link may not work, as they tend to take them down after a period of time, but given it was created within the past few hours, it should be fine.  
 
 # DESIGN CONSIDERATIONS
 
-I decided to go with a vibrantly colourful gradient background to represent the brand of the website. I think it makes the website feel more organic and more like a native application, rather than a static website.
+I decided to go with a vibrant gradient background to represent the brand of the website. I think it makes the website feel more organic and more like a native application, rather than a static website.
 
 The orange and pink are philosophically meant to represent the feeling of "fruit in the morning", which ties into this idea of healthy eating (aka broccoli). The problem is that green isn't a particularly appetising, nor necessarily appealing colour, which is why we need to use associated colours to try and convey Broccoli's brand message.
 
-On another level, the orange coming in from top-right hand corner is also meant to represent the morning sun, casting the thick animated shadows of the main button, creating this kind of tropical nirvana on your computer screen.
+On another level, the orange coming in from top-right hand corner is also meant to represent the morning sun, casting it's shadow over the thick animated bezel of the primary button, creating this kind of "tropical nirvana" on your computer screen.
 
-I know. It all sounds very wanky. But I think these are the reasons why this design work. 
+I know, folks. It all sounds very wanky, but I think these are the reasons why the website feels so... complete. 
 
 # UX TWEAKS
 
-- Added a Recaptcha to the form (technically it doesn't actually validate anything, provided it requires server-side validation, but I added it none-the-less for completeness.)
-- Added a close button to the popup form.  
+- Added a Recaptcha to the form.
+- Added a close button to the popup form.
+
+# PROBLEM AREAS
+
+- The automated testing is lacking. This is one of my primary weak points that I would like to grow and be mentored on. 
 
 # SETUP
 
