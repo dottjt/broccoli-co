@@ -1,8 +1,11 @@
+# Broccoli & Co
+
+![Broccoli Homepage Screenshot](https://github.com/dottjt/broccoli-co/blob/master/homepage.png "Broccoli Homepage Screenshot")
 
 
-### SETUP
+# SETUP
 
-This application was built using create-react-app. 
+This application was built using create-react-app. It utilises MobX for state management and Axios for making HTTP requests. 
 
 In order to setup the application please the root of this repository and install all required dependencies:
 
