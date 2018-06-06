@@ -6,9 +6,9 @@
 
 This project is available online for your convenience:
 
-> https://broccoli-sdurjtgaem.now.sh
+> https://broccoli-emvxnkfmke.now.sh
 
-NOTE: The link may not work, as they tend to take them down after a period of time, but given it was created within the past few hours, it should be fine.  
+NOTE: The link may not work, as they tend to take them down after a period of time, but given it was created within the past few hours, it should be fine. I've also found that it can be slow, so yeah.
 
 # DESIGN CONSIDERATIONS
 
