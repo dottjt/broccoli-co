@@ -10,11 +10,13 @@ This project is available online for your convenience:
 
 # DESIGN CONSIDERATIONS
 
-I decided to go with a vibrantly colourful gradient background to represent the brand of the website. For starters I think it's hip, fresh and it makes the website feel more organic and more like a native application, rather than a static and bland looking ol' thing.
+I decided to go with a vibrantly colourful gradient background to represent the brand of the website. I think it makes the website feel more organic and more like a native application, rather than a static website.
 
-The orange and pink are philosophically meant to represent the feeling of "fruit in the morning", which ties into this idea of healthy eating (aka broccoli). On another level, the orange coming in from top-right hand corner is also meant to represent the morning sun, casting with the thick animated shadow of the buttons representing the , creating this kind of complete tropical scene.
+The orange and pink are philosophically meant to represent the feeling of "fruit in the morning", which ties into this idea of healthy eating (aka broccoli). The problem is that green isn't a particularly appetising, nor necessarily appealing colour, which is why we need to use associated colours to try and convey Broccoli's brand message.
 
-I know, it sounds wanky as hell. But I think that's why it all works on a subconscious level. 
+On another level, the orange coming in from top-right hand corner is also meant to represent the morning sun, casting the thick animated shadows of the main button, creating this kind of tropical nirvana on your computer screen.
+
+I know. It all sounds very wanky. But I think these are the reasons why this design work. 
 
 # UX TWEAKS
 
