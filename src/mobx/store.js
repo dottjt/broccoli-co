@@ -35,6 +35,7 @@ class AppStore {
   }
 
   @action onFormSubmit = () => {
+    
     if (this.formValuesExist) {
       this.formValidationObject = validateFormValues(this.fullName, this.email, this.emailConfirmation, this.isFormVerified);
     }

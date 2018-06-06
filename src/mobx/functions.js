@@ -7,6 +7,7 @@ export const validateFormValues = (fullName, email, emailConfirmation, formVerif
   const invalidFullName = !fullName || fullName.length < 3; // clearly not a coincidence, because love is in the air <3
   const invalidEmail = !email || !validateEmail(email);
   const invalidEmailConfirmation = email !== emailConfirmation;
+  const invalidFormVerification = !formVerification;
 
   if (invalidFullName) {
     return {
@@ -16,26 +17,27 @@ export const validateFormValues = (fullName, email, emailConfirmation, formVerif
     }
   }
   
-  if ((invalidEmail && invalidEmailConfirmation) || invalidEmailConfirmation) {
+  if (invalidEmailConfirmation) {
     return {
       isValid: false,
       errorMessage: "Your emails don't match.",
-      errorType: "email",
+      errorType: "emailConfirmation",
     }
   }
 
   if (invalidEmail) {
     return {
       isValid: false,
-      errorMessage: "Please enter a valid email",
-      errorType: "emailConfirmation",
+      errorMessage: "Please enter a valid email.",
+      errorType: "email",
     }
   }
+  
 
-  if (formVerification) {
+  if (invalidFormVerification) {
     return {
       isValid: false,
-      errorMessage: "Please verify the captcha",
+      errorMessage: "Please verify the recaptcha.",
       errorType: "recaptcha",
     }
   }

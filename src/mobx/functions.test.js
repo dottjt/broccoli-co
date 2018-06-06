@@ -11,43 +11,47 @@ describe('validateFormValues', () => {
   const invalidEmailConfirmation = "wahwahwahwahwah";
   const validEmailConfirmation = "cake@gmail.com";
   
-  it('invalidFullName + validEmail + validEmailConfirmation' , () => {
-    const formValidationObject = validateFormValues(invalidFullName, validEmail, validEmailConfirmation);
+  const invalidRecaptcha = false;
+  const validRecaptcha = true;
+
+
+  it('invalidFullName + validEmail + validEmailConfirmation + validRecaptcha' , () => {
+    const formValidationObject = validateFormValues(invalidFullName, validEmail, validEmailConfirmation, validRecaptcha);
     
-    expect(formValidationObject.isValid).to.be.equal(false);
-    expect(formValidationObject.errorMessage.length).to.be.greater.than(0);
-    expect(formValidationObject.errorType).to.be.equal("fullName");
+    expect(formValidationObject.isValid).toBe(false);
+    expect(formValidationObject.errorMessage.length).toBeGreaterThan(0);
+    expect(formValidationObject.errorType).toBe("fullName");
   });
 
-  it('validFullName + invalidEmail + validEmailConfirmation' , () => {
-    const formValidationObject = validateFormValues(validFullName, validEmail, validEmailConfirmation);
+  it('validFullName + validEmail + invalidEmailConfirmation + validRecaptcha' , () => {
+    const formValidationObject = validateFormValues(validFullName, validEmail, invalidEmailConfirmation, validRecaptcha);
     
-    expect(formValidationObject.isValid).to.be.equal(false);
-    expect(formValidationObject.errorMessage.length).to.be.greater.than(0);    
-    expect(formValidationObject.errorType).to.be.equal("email");    
+    expect(formValidationObject.isValid).toBe(false);
+    expect(formValidationObject.errorMessage.length).toBeGreaterThan(0);    
+    expect(formValidationObject.errorType).toBe("emailConfirmation");    
   });
 
-  it('validFullName + validEmail + invalidEmailConfirmation' , () => {
-    const formValidationObject = validateFormValues(validFullName, validEmail, validEmailConfirmation);
+  it('validFullName + invalidEmail + invalidEmailConfirmation + validRecaptcha' , () => {
+    const formValidationObject = validateFormValues(validFullName, invalidEmail, invalidEmailConfirmation, validRecaptcha);
     
-    expect(formValidationObject.isValid).to.be.equal(false);
-    expect(formValidationObject.errorMessage.length).to.be.greater.than(0);    
-    expect(formValidationObject.errorType).to.be.equal("emailConfirmation");    
+    expect(formValidationObject.isValid).toBe(false);
+    expect(formValidationObject.errorMessage.length).toBeGreaterThan(0);    
+    expect(formValidationObject.errorType).toBe("emailConfirmation");    
   });
 
-  it('validFullName + validEmail + validEmailConfirmation' , () => {
-    const formValidationObject = validateFormValues(validFullName, validEmail, validEmailConfirmation);
+  it('validFullName + validEmail + validEmailConfirmation + invalidRecaptcha' , () => {
+    const formValidationObject = validateFormValues(validFullName, validEmail, validEmailConfirmation, invalidRecaptcha);
     
-    expect(formValidationObject.isValid).to.be.equal(false);
-    expect(formValidationObject.errorMessage.length).to.be.greater.than(0);    
-    expect(formValidationObject.errorType).to.be.equal("recaptcha");      
+    expect(formValidationObject.isValid).toBe(false);
+    expect(formValidationObject.errorMessage.length).toBeGreaterThan(0);    
+    expect(formValidationObject.errorType).toBe("recaptcha");      
   });
 
-  it('validFullName + validEmail + validEmailConfirmation' , () => {
-    const formValidationObject = validateFormValues(validFullName, validEmail, validEmailConfirmation);
+  it('validFullName + validEmail + validEmailConfirmation + validRecaptcha' , () => {
+    const formValidationObject = validateFormValues(validFullName, validEmail, validEmailConfirmation, validRecaptcha);
     
-    expect(formValidationObject.isValid).to.be.equal(false);
-    expect(formValidationObject.errorMessage.length).to.be.equal(0);    
-    expect(formValidationObject.errorType).to.be.equal("recaptcha");      
+    expect(formValidationObject.isValid).toBe(true);
+    expect(formValidationObject.errorMessage.length).toBe(0);    
+    expect(formValidationObject.errorType).toBe("success");      
   });
 })
