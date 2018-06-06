@@ -29,7 +29,7 @@ It all sounds very wanky, but I think these are the reasons why the website feel
 
 # PROBLEM AREAS
 
-- The automated testing is lacking. This is one of my primary weak points that I would like to grow and be mentored on. 
+- The automated testing is lacking (and blatantly not present in some areas). This is one of my primary weak points that I would like to grow and be mentored on. 
 
 # SETUP
 
