@@ -95,7 +95,6 @@
       .form__button {
         font-weight: 900;        
 
-        opacity: 0.5;
         height: 2.8rem;
         width: 100%;
 
@@ -104,27 +103,30 @@
         border: 2px solid black;
         padding: 0.2rem;
         
-        cursor: pointer;
-
         box-shadow: -3px 3px 0px 0px black;
-
-        transition: .3s box-shadow;
-      }
-
-      .form__button:hover {
-        box-shadow: -6px 6px 0px 0px black;
       }
 
       .form__button:focus {
         outline: 0;
       }
   
+      .form__button__faded__false {
+        background: white;
+        opacity: 0.5;
+        cursor: default;
+      }
+
       .form__button__faded__true {
         background: rgb(0, 255, 106);
         opacity: 1;
         cursor: pointer;
+        transition: .3s box-shadow;        
       }
         
+      .form__button__faded__true:hover {
+        box-shadow: -6px 6px 0px 0px black;
+      }
+
       .form__error {
         display: flex;
         justify-content: center;

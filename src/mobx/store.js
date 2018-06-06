@@ -5,7 +5,6 @@ import axios from 'axios';
 const apiEndpoint = "https://l94wc2001h.execute-api.ap-southeast-2.amazonaws.com/prod/fake-auth";
 
 class AppStore {
-  
   @observable isFormVisible = false;
   @action isFormVisibleToggle = isFormVisible => this.isFormVisible = !isFormVisible;
 
@@ -31,7 +30,7 @@ class AppStore {
   }
 
   @computed get formValuesExist() {
-    return this.fullName && this.email && this.emailConfirmation ? true : false;
+    return this.fullName && this.email && this.emailConfirmation && this.isFormVerified ? true : false;
   }
 
   @action onFormSubmit = () => {
@@ -49,7 +48,12 @@ class AppStore {
       }).then((response) => {
         this.formStatus = "success";
       }).catch((error) => {
-        this.formStatus = "failure";          
+        this.formStatus = "failure";
+        this.formValidationObject = {
+          isValid: false,
+          errorMessage: error,
+          errorType: "failure",
+        }
       });
     }
   }
