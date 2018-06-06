@@ -3,18 +3,18 @@ import { observer } from 'mobx-react';
 
 import PropTypes from 'prop-types';
 
-import { FormInput, FormButton, FormError } from './FormUtilities';
+import { FormInput, FormButton, FormError, FormCaptcha } from './FormUtilities';
 
 @observer
 class Form extends Component {
 
   render() {
     const store = this.props.store;
-    
+
     return (
       <div className={`form__underlay__${store.isFormVisible}`}>
         <div className="form">
-          <div className="form__close" onClick={() => store.isFormVisibleToggle(store.isFormVisible)}><i class="fas fa-times"></i></div>
+          <div className="form__close" onClick={() => store.isFormVisibleToggle(store.isFormVisible)}><i className="fas fa-times"></i></div>
 
           <h4 className="form__title">REQUEST AN INVITE</h4>
 
@@ -23,9 +23,10 @@ class Form extends Component {
             <FormInput type="password" placeholder="Email" value={store.email} onChangeInput={store.onChangeEmail}/>
             <FormInput type="password" placeholder="Email confirmation" value={store.emailConfirmation} onChangeInput={store.onChangeEmailConfirmation} />
           </div>
-          
+
           <div className="form__submission__container">
-            <FormButton onFormSubmit={store.onFormSubmit} formValuesExist={store.formValuesExist}/>
+            <FormCaptcha />
+            <FormButton formStatus={store.formStatus} onFormSubmit={store.onFormSubmit} formValuesExist={store.formValuesExist} fullName={store.fullName} email={store.email} emailConfirmation={store.emailConfirmation} />
             <FormError formValidationObject={store.formValidationObject} />
           </div>
         </div>

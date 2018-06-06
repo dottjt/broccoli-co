@@ -1,7 +1,8 @@
 import { observable, action, computed } from 'mobx';
-import { validateFormValues, formSubmission } from './functions';
+import { validateFormValues } from './functions';
+import axios from 'axios';
 
-const apiFormEndpoint = "https://l94wc2001h.execute-api.ap-southeast-2.amazonaws.com/prod/fake-auth";
+const apiEndpoint = "https://l94wc2001h.execute-api.ap-southeast-2.amazonaws.com/prod/fake-auth";
 
 export default class AppStore {
   
@@ -17,6 +18,9 @@ export default class AppStore {
   @observable emailConfirmation = "";
   @action onChangeEmailConfirmation = inputValue => this.emailConfirmation = inputValue;
 
+  // initial, loading, success, failure
+  @observable formStatus = "initial";
+
   @observable formValidationObject = {
     isValid: false,
     errorMessage: "",
@@ -26,15 +30,31 @@ export default class AppStore {
     return this.fullName && this.email && this.emailConfirmation ? true : false;
   }
 
-  @action onFormSubmit(hasFormValues) {
-    const formValidationObject = validateFormValues(this.fullName, this.email, this.emailConfirmation);
-
-    if (hasFormValues && formValidationObject.isValid) {
-      formSubmission(apiFormEndpoint, this.fullName, this.email);
-      return formValidationObject;
-    } else {
-      return formValidationObject;
+  @action onFormSubmit = () => {
+    if (this.formValuesExist) {
+      this.formValidationObject = validateFormValues(this.fullName, this.email, this.emailConfirmation);
     }
+
+    if (this.formValidationObject.isValid) {
+      this.formStatus = "loading";
+
+      axios.post(apiEndpoint, {
+        name: this.fullName,
+        email: this.email,
+      }).then((response) => {
+        this.formStatus = "success";
+      }).catch((error) => {
+        this.formStatus = "failure";          
+      });
+    }
+  }
+
+  @action resetForm = () => {
+    this.isFormVisible = false;
+    this.formStatus = "initial";
+    this.fullName = "";
+    this.email = "";
+    this.emailConfirmation = ""; 
   }
 }
  

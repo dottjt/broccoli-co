@@ -1,6 +1,7 @@
 // PAGE.SCSS
 
 .page {
+
   display: grid;
   grid-template-rows: 1fr minmax(auto, 5fr) 1fr;
 
@@ -47,6 +48,7 @@
     padding-right: 1rem;
 
     color: white;
+    animation: fadein 1.5s;
 
     .hero__inner {
       
@@ -70,10 +72,6 @@
 
     .hero__button {
       font-weight: 900;
-      
-      // background: white;
-      // color: black;
-      // border: 2px solid purple;
       box-shadow: -5px 5px 0px 0px black;
 
       color: white;
@@ -82,10 +80,16 @@
 
       padding: 1rem;      
       cursor: pointer;
+
+      transition: .3s box-shadow;
+    }
+
+    .hero__button:hover {
+      box-shadow: -10px 10px 0px 0px black;
     }
 
     .hero__button:focus {
-      outline:0;
+      outline: 0;
     }
   }
   
@@ -120,4 +124,10 @@
       }
     }
   }
+}
+
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
