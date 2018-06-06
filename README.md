@@ -8,7 +8,7 @@ This project is available online for your convenience:
 
 > https://broccoli.juliusreade.com/ 
 
-NOTE: I knocked the server/domain up super quick this morning, so it's possible that the DNS for the domain has not yet propagated, just in case you cannot access the domain. It seems fine on my end.
+NOTE: I knocked up the server/domain super quick this morning, so it's possible that the DNS for the domain has not yet propagated, just in case you cannot access the domain. It seems fine on my end.
 
 Alternatively it is available here:
 
