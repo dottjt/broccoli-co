@@ -12,7 +12,7 @@ NOTE: I knocked up the server/domain super quick this morning, so it's possible 
 
 Alternatively it is available here:
 
-> https://broccoli-emvxnkfmke.now.sh
+> https://broccoli-jomxzlznnk.now.sh
 
 NOTE: The link may not work, as they tend to take them down after a period of time, but given it was created within the past few hours, it should be fine. I've also found that it can be slow, so yeah.
 
