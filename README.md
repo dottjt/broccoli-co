@@ -18,7 +18,9 @@ The orange and pink are philosophically meant to represent the feeling of "fruit
 
 On another level, the orange coming in from top-right hand corner is also meant to represent the morning sun, casting it's shadow over the thick animated bezel of the primary button, creating this kind of "tropical nirvana" on your computer screen.
 
-I know, folks. It all sounds very wanky, but I think these are the reasons why the website feels so... complete. 
+I know, folks. 
+
+It all sounds very wanky, but I think these are the reasons why the website feels so... complete. 
 
 # UX TWEAKS
 
