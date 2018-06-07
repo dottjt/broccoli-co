@@ -51,7 +51,7 @@ class AppStore {
         this.formStatus = "failure";
         this.formValidationObject = {
           isValid: false,
-          errorMessage: error,
+          errorMessage: error.response.data.errorMessage,
           errorType: "failure",
         }
       });
