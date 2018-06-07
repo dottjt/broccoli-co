@@ -10,13 +10,6 @@ This project is available online for your convenience:
 
 NOTE: I knocked up the server/domain super quick this morning, so it's possible that the DNS for the domain has not yet propagated, just in case you cannot access the domain. It seems fine on my end.
 
-Alternatively it is available here:
-
-> https://broccoli-jomxzlznnk.now.sh
-
-NOTE: The link may not work, as they tend to take them down after a period of time, but given it was created within the past few hours, it should be fine. I've also found that it can be slow, so yeah.
-
-
 # DESIGN CONSIDERATIONS
 
 I decided to go with a vibrant gradient background to represent the brand of the website. I think it makes the website feel more organic and more like a native application, rather than a static backdrop of information.
@@ -38,6 +31,7 @@ It all sounds very wanky, but I think these are the reasons why the website feel
 
 - The automated testing is lacking (and blatantly not present in some areas). This is one of my primary weak points that I would like to grow and be mentored on. In addition, I just didn't have the time.
 - The CSS is not as neat as it could be, but I didn't really have the time to refactor and make things pretty. 
+- Would have liked to do more cross-browser testing, and I managed to pick up a few bugs, but again, was a little short of time. 
 
 # SETUP
 
